@@ -1,0 +1,20 @@
+Project Name,Facebook,,,,,,,,,,,,
+Created By,Anjali Yadav,,,,,,,,,,,,
+Creation Date,8.15.2025,,,,,,,,,,,,
+Reviewed By,,,,,,,,,,,,,
+Reviewed Date,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Test Scenario Id,Test Scenario Description,Test Case ID,Test Case Description,Test Steps,Preconditions,Test Data,Postconditions,Expected Result,Actual Result,Status,Executed By,Executed Date,Comments(if any)
+TS_FB_001,Verify User Login,TC_Login_001,Valid login,1. Go to Facebook login page     2. Enter valid email and password                                        3. Click login,User registered on Facebook,Valid email & password,User logged in,User redirected to home page,As expected,Pass,Anjali Yadav,8.15.2025,      -
+,,TC_Login_002,Invalid login,1. Go to Facebook login page 2. Enter invalid email or password                                 3. Click login,User registered on Facebook,Invalid email/password,User not logged in,Error message “Incorrect email or password” displayed,As expected,Pass,Anjali Yadav,8.15.2025,      -
+,,TC_Login_003,Login without credentials,1. Go to Facebook login page 2. Click login without entering data,None,Empty fields,User not logged in,Error messages displayed for required fields,As expected,Pass,Anjali Yadav,8.15.2025,      -
+TS_FB_002,Verify posting status,TC_Post_001,Post text status,1. Login to Facebook             2. Go to status box                3. Enter text                            4. Click Post,User logged in,Text message,Status posted on timeline,Status visible to friends or as per privacy setting,As expected,Pass,Anjali Yadav,8.15.2025,      -
+,,TC_Post_002,Post image status,1. Login to Facebook             2. Go to status box                3. Upload image                     4. Click Post,User logged in,Image file,Status with image posted,Image visible on timeline,As expected,Pass,Anjali Yadav,8.15.2025,      -
+TS_FB_003,Send friend request,TC_Friend_001,Add friend,1. Search for user                  2. Click Add Friend,User logged in,User account,Friend request sent,Friend request visible on receiver,As expected,Pass,Anjali Yadav,8.15.2025,      -
+,,TC_Friend_002,Accept pending request,1. Go to Friend Requests      2. Click Accept,User logged in,Pending request,Friendship established,Both users see each other as friends,As expected,Pass,Anjali Yadav,8.15.2025,      -
+,,TC_Friend_003,Reject pending request,1. Go to Friend Requests      2. Click Reject,User logged in,Pending request,Request removed,Friend request disappears,As expected,Pass,Anjali Yadav,8.15.2025,      -
+TS_FB_004,Notifications,TC_Notification_001,Notification for like,1. Like a friend’s post,User logged in,Friend's ID,Notification received,Notification visible,As expected,Pass,Anjali Yadav,8.15.2025,      -
+,,TC_Notification_002,Notification for comment,1. Comment on a friend’s post,User logged in,Comment text,Notification received,Notification visible,As expected,Pass,Anjali Yadav,8.15.2025,      -
+,,TC_Notification_003,Notification for friend request,1. Send/receive friend request,User logged in,Friend's Username,Notification received,Notification visible,As expected,Pass,Anjali Yadav,8.15.2025, 
+TS_FB_005,Update profile picture,TC_Update_001,Update profile picture with valid image,1. Login                                    2. Go to profile page             3. Click “Update Profile Picture”                                    4. Select valid .jpg file under 5MB                                          5. Save changes,User logged in,"Valid image file (JPG, < 5MB)",Profile picture updated,New profile picture is displayed on profile and visible to friends,As expected,Pass,Anjali Yadav,8.15.2025,      -
+,,TC_Update_002,Attempt to upload unsupported file type,1. Login                                    2. Go to profile page             3. Click “Update Profile Picture”                                    4. Select .exe file                    5. Save changes,User logged in,Invalid file type (.exe),Profile picture not updated,Error message displayed: “Invalid file format”,As expected,Pass,Anjali Yadav,8.15.2025,      -

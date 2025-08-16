@@ -1,0 +1,51 @@
+Project Name,Daraz Nepal,,,,,,,,,,,,
+Created By,Anjali Yadav,,,,,,,,,,,,
+Creation Date,8.16.2025,,,,,,,,,,,,
+Reviewed By,,,,,,,,,,,,,
+Reviewed Date,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Test Scenario Id,Test Scenario Description,Test Case ID,Test Case Description,Test Steps,Preconditions,Test Data,Postconditions,Expected Result,Actual Result,Status,Executed By,Executed Date,Comments(if any)
+TS_DZ_001,Product Search,TC_Product_001,Search for existing product,1. Go to Daraz homepage       2. Enter product name             3. Click Search,User on homepage,Product name,Search results displayed,Relevant products listed,As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Product_002,"Search for non-existing product
+",1. Enter invalid product name 2. Click Search,"User on homepage
+","Invalid product name
+",No products found message,"“No results found” displayed
+",As expected,Pass,Anjali Yadav,8.16.2025,       -
+TS_DZ_002,Cart & Wishlist,TC_Cart_001,Add product to cart,1. Open product page              2. Click Add to Cart,User logged in,"Product ID
+",Product added,Cart count increments,As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Cart_002,Add product to wishlist,"1. Open product page             2. Click Add to Wishlist
+",User logged in,Product ID,Product added,Wishlist count increments,As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Cart_003,Add product without login,1. Open product page             2. Click Add to Cart/Wishlist,User not logged in,"Product ID
+",Product not added,Redirected to login page,As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Cart_004,Remove product from cart,1. Open cart                               2. Click Remove,"User logged in, product in cart","Product ID
+",Product removed,Cart count decremented,As expected,Pass,Anjali Yadav,8.16.2025,       -
+TS_DZ_003,Checkout & Payment,TC_Checkout_001,Complete order with valid login,1. Add product to cart             2. Click Checkout                      3. Enter address & payment,User logged in,"Product, payment info",Order placed,Order confirmation displayed,As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Checkout_002,Attempt checkout without login,"1. Add product to cart             2. Click Checkout
+","User not logged in
+","Product ID
+",Redirected to login,Login required message displayed,As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Checkout_003,Enter invalid payment details,1. Checkout                                2. Enter invalid card,User logged in,Invalid card info,Payment failed,Error message displayed,As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Checkout_004,Enter valid payment details,1. Checkout                                2. Enter valid card,User logged in,Valid card info,Order confirmed,Order confirmation displayed,As expected,Pass,Anjali Yadav,8.16.2025,       -
+TS_DZ_004,Reviews & Ratings,TC_Review_001,Write review with rating,"1. Open product page             2. Click Write Review               3. Enter rating & comment       4. Submit
+",User logged in,"Review text, rating
+",Review added,"Review visible on product page
+",As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Review_002,Like another user’s review,1. Open product page              2. Click Like on review,User logged in,Other user's review,Review liked,"Like count increments
+",As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Review_003,Update previously submitted review,1. Open product page                2. Go to user review                3. Edit and save,"User logged in, review exists",Updated review,"Review updated
+","Updated review visible
+",As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Review_004,Delete user review,1. Open product page              2. Go to user review                3. Delete,"User logged in, review exists",      -,Review deleted,"Review removed from product page
+",As expected,Pass,Anjali Yadav,8.16.2025,       -
+TS_DZ_005,Verify user login functionality,TC_Login_001,Login with valid credentials,1. Go to Daraz login page        2. Enter valid email & password                                   3. Click Login,User registered account,"Valid email & password
+",User logged in,User redirected to home/dashboard,As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Login_002,Login with invalid password,1. Go to login page                    2. Enter valid email & wrong password                                   3. Click Login,User registered account,"Valid email & invalid password
+",User not logged in,"Error message “Invalid username or password” displayed
+",As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Login_003,Login with unregistered email,1. Go to login page                   2. Enter unregistered email & any password                            3. Click Login,None,Invalid email,User not logged in,Error message “Account does not exist” displayed,As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Login_004,Login with empty fields,"1. Go to login page                      2. Leave email & password blank                                            3. Click Login
+",None,Empty fields,User not logged in,"Error message “Email and Password required” displayed
+",As expected,Pass,Anjali Yadav,8.16.2025,       -
+,,TC_Login_005,Login with “Forgot Password” option,"1. Go to login page                   2. Click “Forgot Password”          3. Enter registered email        4. Reset password
+",User registered account,Valid registered email,Password reset email sent,"Confirmation message displayed, reset email received
+",As expected,Pass,Anjali Yadav,8.16.2025,       -
